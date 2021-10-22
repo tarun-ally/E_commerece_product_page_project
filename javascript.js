@@ -270,7 +270,7 @@ function myCart() {
     var x = document.getElementById("mylink")
     if (x.style.display === "block") {
         x.style.display = "none";
-        burgerTag.src = "./images/icon-hamburger.svg";
+        // burgerTag.src = "./images/icon-hamburger.svg";
 
 
 
@@ -324,20 +324,14 @@ function menu() {
     let x = document.getElementById("mylink");
     if (x.style.display === "block") {
         x.style.display = "none";
-        // burgerTag.src = "images/icon-menu.svg";
 
 
 
     } else {
         x.style.display = "block";
-        // icon.appendChild()
-        // burgerTag.src = "images/icon-close.svg";
-        // burgerTag.style.backgroundColor = 'blue'
-        // burgerTag.style.background.width = '100%';
-        // burgerTag.style.width = '20px';
+    
         icon.style.width = "100px";
-        // icon.style.backgroundColor = "red";
-        shadow.style.boxShadow = "-100px 20px 400px 0 hsl(233, 26%, 24%)"
+     
 
     }
 

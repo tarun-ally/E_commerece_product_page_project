@@ -52,12 +52,12 @@ body {
         /* margin-right: auto; */
         align-self: center;
         /* border-radius: 5px; */
-        position: absolute;
+        position: fixed;
         left: 0%;
         top: 0%;
         color: hsl(0, 21%, 41%);
         /* background-color: coral; */
-       boxShadow : 50px 60px 400px 0 hsl(233, 26%, 24%) ;
+       /* boxShadow : 50px 60px 400px 0 hsl(233, 26%, 24%) ; */
         background-color: hsl(0, 0%, 100%);
     }
 
@@ -381,11 +381,12 @@ body {
         display: none;
         width: 6%;
         position: fixed;
-        margin-top: -33px;
+/* top: 0%; */
+        margin-top: -13px;
         margin-left: 10px;
         border-radius: 40%;
 
-        /* background-color: hsl(26, 100%, 55%); */
+        background-color: hsl(26, 100%, 55%);
     }
 
     #counting-number ul {
