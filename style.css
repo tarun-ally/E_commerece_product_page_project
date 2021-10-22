@@ -616,7 +616,7 @@ body {
 
 
     #counting-number {
-        /* display: none; */
+        display: none;
         cursor: pointer;
         width: 30%;
         height: 17px;
