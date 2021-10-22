@@ -377,8 +377,8 @@ body {
 
 
     #counting-number {
-        cursor: pointer;
         display: none;
+        cursor: pointer;
         width: 6%;
         position: fixed;
 /* top: 0%; */
@@ -616,7 +616,7 @@ body {
 
 
     #counting-number {
-        display: none;
+        /* display: none; */
         cursor: pointer;
         width: 30%;
         height: 17px;

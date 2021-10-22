@@ -248,7 +248,7 @@ console.log(countingNumber.childNodes);
 console.log(countingNumber.childNodes[1]);
 function myPrizing() {
 
-    if(number != 0){
+    if(number > -1){
         countingNumber.style.display='block';
         countingNumber.childNodes[1].textContent = `${number}`;
         let multiply = 125 * number;
