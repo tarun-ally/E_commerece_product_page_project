@@ -9,7 +9,7 @@ body {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
 
     nav {
         width: 100vw;
@@ -234,10 +234,10 @@ body {
         right: 10%;
         display: flex;
 
-        background-color: greenyellow;
+        /* background-color: greenyellow; */
     }
 
-    /* main divition */
+    
 
 
     .hero {
@@ -268,7 +268,7 @@ body {
         display: flex;
 
         justify-content: space-between;
-        padding-top: 190px;
+        padding-top: 150px;
         margin-left: auto;
         margin-right: auto;
         /* height: 1px; */
@@ -291,28 +291,26 @@ body {
 
     .hero-image img {
         width: 20%;
-        /* margin-top: -15%; */
         display: block;
-        /* margin-left: auto; */
-        /* margin-right: auto; */
+      
     }
 
     section {
-        /* background-color: lightcoral; */
-        /* height: 1004px; */
-        margin-top: -200px;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 2.5rem;
+        width: 80%;
+        position:absolute;
+        top: 63%;
+        /* left: -10%; */
+        /* background-color: red; */
+      
         text-align: start;
         font-weight: 300;
-        width: 90%;
-        /* margin: 15px auto 20px auto; */
+        margin: 0px auto 70px 40px;
         line-height: 3rem;
         color: #333333;
     }
 
     section header h3 {
+        width: 100%;
         font-size: 1rem;
         /* background-color: cyan; */
         font-weight: 700;
@@ -324,6 +322,8 @@ body {
         /* background-color: cyan; */
         font-weight: 700;
         line-height: 2.3rem;
+        width: 100%;
+
         /* color:hsl(26, 100%, 55%); */
     }
 
@@ -897,7 +897,6 @@ body {
     /* font-size: 50px; */
 }
 
-}
 
 
 /* xxxxxxxxxxxxxxxxxxxxxxxx */
@@ -1073,6 +1072,7 @@ display: flex;
     bottom: 24px;
 
 
+}
 }
 
 
