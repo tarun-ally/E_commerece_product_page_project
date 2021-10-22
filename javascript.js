@@ -114,12 +114,8 @@ const heroImage = document.getElementById("hero-image");
 // for desktop..........
 const thumbnail = document.getElementById('thumbnail');
 
-const desktopImage = document.getElementById('desktopImage');
-// console.log(thumbnail.childNodes);
-// console.log(thumbnail.childNodes[3].alt);
+console.log(thumbnail.childNodes[3].alt);
 
-// console.log(desktopImage.childNodes);
-// console.log(desktopImage.childNodes[1].src);
 
 thumbnail.addEventListener('click',myThumbnail);
 function myThumbnail(e){
@@ -127,9 +123,9 @@ function myThumbnail(e){
     console.log(e.target.alt);
     if(e.target.alt !=undefined){
 
-        desktopImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${e.target.alt}.jpg`
+        lightGalleryShow.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${e.target.alt}.jpg`
     }
-    console.log(desktopImage.childNodes[1].src);
+    // console.log(desktopImage.childNodes[1].src);
   
 }
 
@@ -244,8 +240,8 @@ function removingProduct() {
 const countingNumber = document.getElementById('counting-number');
 // countingNumber.addEventListener('click',myPrizing);
 
-console.log(countingNumber.childNodes);
-console.log(countingNumber.childNodes[1]);
+// console.log(countingNumber.childNodes);
+// console.log(countingNumber.childNodes[1]);
 function myPrizing() {
 
     if(number > -1){
