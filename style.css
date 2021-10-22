@@ -370,7 +370,8 @@ body {
     }
 
     #cart-svg {
-        margin-left: 100px;
+        margin-top: 10px;
+        margin-left: 90px;
         /* padding: 20px 0 20px 0; */
     }
 
@@ -414,6 +415,7 @@ body {
     }
 
     #showingNumber {
+        padding-top: 20px;
         /* background-color: tomato; */
         font-size: 1.5rem;
         font-weight: 700;
