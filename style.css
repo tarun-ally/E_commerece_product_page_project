@@ -17,20 +17,23 @@ body {
         z-index: 1;
         /* background-color: red; */
         background-color: hsl(0, 0%, 100%);
+        /* background-color: rosybrown; */
         padding: 6%;
         position: fixed;
         top: 0;
     }
 
     nav a.icon {
-        background-color: yellow;
+        /* background-color: yellow; */
         position: absolute;
         /* top: 100%; */
         display: block;
         width: 10%;
     }
 
-
+    #light-galery{
+        display: none;
+    }
 
     #mylink a {
         display: block;
