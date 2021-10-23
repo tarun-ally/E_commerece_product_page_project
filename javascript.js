@@ -13,6 +13,19 @@ const previous = document.getElementById("previous");
 const next = document.getElementById("next");
 const lightGalery = document.getElementById("light-galery");
 const lightGaleryClose = document.getElementById("lg-close");
+const heroMobileImage = document.getElementById('hero-mobile-image');
+const lightGaleryThumbnail = document.getElementById("lg-thumbnail");
+const lightGalleryImage = document.getElementById('light-galery-image');
+const thumbnail = document.getElementById('thumbnail');
+
+const heroImage = document.getElementById("hero-image");
+const prizing = document.getElementById('name-value');
+ 
+
+const lightGaleryPrevious=document.getElementById("lg-previous");
+
+
+const lightGaleryNext=document.getElementById("lg-next");
 
 const lightGalleryShow = document.getElementById("desktop-image");
 
@@ -35,14 +48,7 @@ function myLightGaleryClose(){
     lightGalery.style.display='none';
     console.log('tar')
 }
-const lightGaleryThumbnail = document.getElementById("lg-thumbnail");
 
- 
-
-const lightGaleryPrevious=document.getElementById("lg-previous");
-
-
-const lightGaleryNext=document.getElementById("lg-next");
 
 
 
@@ -56,13 +62,12 @@ lightGaleryThumbnail.addEventListener('click',mylightGaleryThumbnail)
 function mylightGaleryThumbnail(e){
     if(e.target.alt !=undefined){
         count1 = e.target.alt;
-        lightGalleryImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${count1}.jpg`;
+        lightGalleryImage.childNodes[1].src = `images/image-product-${count1}.jpg`;
     }
   
 }
 lightGaleryPrevious.addEventListener('click',mylightGaleryPrevious);
 
-const lightGalleryImage = document.getElementById('light-galery-image');
 // console.log(lightGalleryImage.childNodes);
 lightGaleryNext.addEventListener('click',mylightGaleryNext);
 //   lightGalleryShow.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${e.target.alt}.jpg`
@@ -77,22 +82,22 @@ console.log(lightGalleryImage.childNodes[1].src);
         count1+=1;
     }
     if( count1==1){
-        lightGalleryImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${1}.jpg`;
+        lightGalleryImage.childNodes[1].src = `images/image-product-${1}.jpg`;
 
         // lightGalery.style.backgroundImage='url(images/image-product-1.jpg)';
     }
     else if(count1 ==2){
-        lightGalleryImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${2}.jpg`;
+        lightGalleryImage.childNodes[1].src = `images/image-product-${2}.jpg`;
 
         // lightGalery.style.backgroundImage='url(images/image-product-2.jpg)';
     }
     else if(count1 ==3){
-        lightGalleryImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${3}.jpg`;
+        lightGalleryImage.childNodes[1].src = `images/image-product-${3}.jpg`;
 
         // lightGalery.style.backgroundImage='url(images/image-product-3.jpg)';
     }
     else if(count1 ==4){
-        lightGalleryImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${4}.jpg`;
+        lightGalleryImage.childNodes[1].src = `images/image-product-${4}.jpg`;
 
     }
 
@@ -105,25 +110,23 @@ function mylightGaleryPrevious(){
         count1-=1;
     }
     if( count1==1){
-        lightGalleryImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${1}.jpg`;
+        lightGalleryImage.childNodes[1].src = `images/image-product-${1}.jpg`;
     }
     else if(count1 ==2){
-        lightGalleryImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${2}.jpg`;
+        lightGalleryImage.childNodes[1].src = `images/image-product-${2}.jpg`;
     }
     else if(count1 ==3){
-        lightGalleryImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${3}.jpg`;
+        lightGalleryImage.childNodes[1].src = `images/image-product-${3}.jpg`;
     }
     else if(count1 ==4){
-        lightGalleryImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${4}.jpg`;
+        lightGalleryImage.childNodes[1].src = `images/image-product-${4}.jpg`;
     }
 
 }
 
 // .........................................................................
-const heroImage = document.getElementById("hero-image");
 
 // for desktop..........
-const thumbnail = document.getElementById('thumbnail');
 
 console.log(thumbnail.childNodes[3].alt);
 
@@ -134,7 +137,7 @@ function myThumbnail(e){
     console.log(e.target.alt);
     if(e.target.alt !=undefined){
 
-        lightGalleryShow.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${e.target.alt}.jpg`
+        lightGalleryShow.childNodes[1].src = `images/image-product-${e.target.alt}.jpg`
     }
     // console.log(desktopImage.childNodes[1].src);
   
@@ -144,7 +147,6 @@ previous.addEventListener('click',myPrevious);
 next.addEventListener('click',myNext);
 
 let count =1;
-const heroMobileImage = document.getElementById('hero-mobile-image');
 // hero-mobile-image
 function myNext(){
     if (count==4){
@@ -153,16 +155,16 @@ function myNext(){
         count+=1;
     }
     if( count ==1){
-        heroMobileImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${1}.jpg`;
+        heroMobileImage.childNodes[1].src = `images/image-product-${1}.jpg`;
     }
     else if(count ==2){
-        heroMobileImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${2}.jpg`;
+        heroMobileImage.childNodes[1].src = `images/image-product-${2}.jpg`;
     }
     else if(count ==3){
-        heroMobileImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${3}.jpg`;
+        heroMobileImage.childNodes[1].src = `images/image-product-${3}.jpg`;
     }
     else if(count ==4){
-        heroMobileImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${4}.jpg`;
+        heroMobileImage.childNodes[1].src = `images/image-product-${4}.jpg`;
     }
 
 
@@ -176,16 +178,16 @@ function myPrevious(){
         count-=1;
     }
     if( count ==1){
-        heroMobileImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${1}.jpg`;
+        heroMobileImage.childNodes[1].src = `images/image-product-${1}.jpg`;
     }
     else if(count ==2){
-        heroMobileImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${2}.jpg`;
+        heroMobileImage.childNodes[1].src = `images/image-product-${2}.jpg`;
     }
     else if(count ==3){
-        heroMobileImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${3}.jpg`;
+        heroMobileImage.childNodes[1].src = `images/image-product-${3}.jpg`;
     }
     else if(count ==4){
-        heroMobileImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${4}.jpg`;
+        heroMobileImage.childNodes[1].src = `images/image-product-${4}.jpg`;
     }
 
 }
@@ -195,7 +197,6 @@ function myPrevious(){
 
 close.addEventListener('click',()=>{shadow.style.display='none'})
 
-const prizing = document.getElementById('name-value');
 // console.log(prizing.childNodes)
 // console.log(prizing.childNodes[3].textContent)
 
