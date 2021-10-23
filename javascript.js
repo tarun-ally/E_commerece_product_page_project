@@ -137,26 +137,26 @@ previous.addEventListener('click',myPrevious);
 next.addEventListener('click',myNext);
 
 let count =1;
-
+const heroMobileImage = document.getElementById('hero-mobile-image');
+hero-mobile-image
 function myNext(){
     if (count==4){
         count =1;
     }else{
         count+=1;
     }
-    if( count==1){
-        heroImage.style.backgroundImage='url(images/image-product-1.jpg)';
+    if( count ==1){
+        heroMobileImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${1}.jpg`;
     }
     else if(count ==2){
-        heroImage.style.backgroundImage='url(images/image-product-2.jpg)';
+        heroMobileImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${2}.jpg`;
     }
     else if(count ==3){
-        heroImage.style.backgroundImage='url(images/image-product-3.jpg)';
+        heroMobileImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${3}.jpg`;
     }
     else if(count ==4){
-        heroImage.style.backgroundImage='url(images/image-product-4.jpg)';
+        heroMobileImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${4}.jpg`;
     }
-    console.log(count);
 
 
 }
@@ -168,20 +168,18 @@ function myPrevious(){
     }else{
         count-=1;
     }
-    if( count==1){
-        heroImage.style.backgroundImage='url(images/image-product-1.jpg)';
+    if( count ==1){
+        heroMobileImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${1}.jpg`;
     }
     else if(count ==2){
-        heroImage.style.backgroundImage='url(images/image-product-2.jpg)';
+        heroMobileImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${2}.jpg`;
     }
     else if(count ==3){
-        heroImage.style.backgroundImage='url(images/image-product-3.jpg)';
+        heroMobileImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${3}.jpg`;
     }
     else if(count ==4){
-        heroImage.style.backgroundImage='url(images/image-product-4.jpg)';
+        heroMobileImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${4}.jpg`;
     }
-    console.log(count);
-
 
 }
 

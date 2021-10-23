@@ -223,19 +223,18 @@ body {
     #hero-image {
 
         width: 100vw;
-        height: 80vh;
-        background-image: url(images/image-product-1.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        /* position: absolute; */
-        /* top: 0px; */
+   
         margin-top: 7%;
-        background-position-y: -44%;
-        background-size: 100%;
+      
         z-index: -2;
     }
 
-
+    #hero-mobile-image{
+        width: 100%;
+    }
+    #hero-mobile-image img{
+        width: 100%;
+    }
 
     #arrow {
         width: 90%;
@@ -274,7 +273,7 @@ body {
     section {
         width: 80%;
         position: absolute;
-        top: 60%;
+        top: 55%;
 
         text-align: start;
         font-weight: 300;
