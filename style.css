@@ -272,12 +272,12 @@ body {
 
     section {
         width: 80%;
-        position: absolute;
-        top: 55%;
+        /* position: absolute; */
+        /* top: 100px; */
 
         text-align: start;
         font-weight: 300;
-        margin: 0px auto 70px 8%;
+        margin: 10px auto 70px 8%;
         line-height: 3rem;
         color: #333333;
         z-index: -1;
