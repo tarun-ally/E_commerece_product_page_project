@@ -21,6 +21,13 @@ function mydesktopImage(){
     lightGalery.style.display = 'block'; 
 }
 
+var number = 0;
+
+
+let line = document.createElement('li');
+showingNumber.appendChild(line.appendChild(document.createTextNode(number)));
+
+
 lightGaleryClose.addEventListener('click',myLightGaleryClose);
 
 function myLightGaleryClose(){
@@ -138,7 +145,7 @@ next.addEventListener('click',myNext);
 
 let count =1;
 const heroMobileImage = document.getElementById('hero-mobile-image');
-hero-mobile-image
+// hero-mobile-image
 function myNext(){
     if (count==4){
         count =1;
@@ -192,7 +199,6 @@ const prizing = document.getElementById('name-value');
 // console.log(prizing.childNodes)
 // console.log(prizing.childNodes[3].textContent)
 
-var number = 0;
 
 cartButton.addEventListener('click', myPrizing);
 
@@ -281,12 +287,12 @@ function myCart() {
 
 
 // ''''''''''''''''''''''''''''''''''''''''''
-let line = document.createElement('li');
-showingNumber.appendChild(line.appendChild(document.createTextNode(number)));
+
+
 
 minus.addEventListener('click', myMinus);
 plus.addEventListener('click', myPlus);
-
+console.log(minus);
 function myMinus() {
     // console.log(showingNumber.nodeValue);
 
