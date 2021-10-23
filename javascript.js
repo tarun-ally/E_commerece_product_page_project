@@ -47,64 +47,68 @@ lightGaleryThumbnail.addEventListener('click',mylightGaleryThumbnail)
 
 
 function mylightGaleryThumbnail(e){
-    // console.log(e.target);
-    // console.log(e.target.alt);
     if(e.target.alt !=undefined){
         count1 = e.target.alt;
-        lightGalery.style.backgroundImage=`url(http://127.0.0.1:5500/images/image-product-${e.target.alt}.jpg)`;
-        // lightGalery.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${e.target.alt}.jpg`
+        lightGalleryImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${count1}.jpg`;
     }
-    // console.log(lightGalery.childNodes[1].src);
   
 }
 lightGaleryPrevious.addEventListener('click',mylightGaleryPrevious);
 
+const lightGalleryImage = document.getElementById('light-galery-image');
+// console.log(lightGalleryImage.childNodes);
 lightGaleryNext.addEventListener('click',mylightGaleryNext);
+//   lightGalleryShow.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${e.target.alt}.jpg`
 
-function mylightGaleryNext(){
+function mylightGaleryNext(e){
+    console.log(e.target.alt,'as',count1);
+console.log(lightGalleryImage.childNodes[1].src);
+
     if (count1==4){
-        count1 =1;
+        count1 = 1;
     }else{
         count1+=1;
     }
     if( count1==1){
-        lightGalery.style.backgroundImage='url(images/image-product-1.jpg)';
+        lightGalleryImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${1}.jpg`;
+
+        // lightGalery.style.backgroundImage='url(images/image-product-1.jpg)';
     }
     else if(count1 ==2){
-        lightGalery.style.backgroundImage='url(images/image-product-2.jpg)';
+        lightGalleryImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${2}.jpg`;
+
+        // lightGalery.style.backgroundImage='url(images/image-product-2.jpg)';
     }
     else if(count1 ==3){
-        lightGalery.style.backgroundImage='url(images/image-product-3.jpg)';
+        lightGalleryImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${3}.jpg`;
+
+        // lightGalery.style.backgroundImage='url(images/image-product-3.jpg)';
     }
     else if(count1 ==4){
-        lightGalery.style.backgroundImage='url(images/image-product-4.jpg)';
-    }
-    console.log(count1);
+        lightGalleryImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${4}.jpg`;
 
+    }
 
 }
-function mylightGaleryPrevious(){
 
-    
+function mylightGaleryPrevious(){
     if (count1==1){
         count1 =4;
     }else{
         count1-=1;
     }
     if( count1==1){
-        lightGalery.style.backgroundImage='url(images/image-product-1.jpg)';
+        lightGalleryImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${1}.jpg`;
     }
     else if(count1 ==2){
-        lightGalery.style.backgroundImage='url(images/image-product-2.jpg)';
+        lightGalleryImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${2}.jpg`;
     }
     else if(count1 ==3){
-        lightGalery.style.backgroundImage='url(images/image-product-3.jpg)';
+        lightGalleryImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${3}.jpg`;
     }
     else if(count1 ==4){
-        lightGalery.style.backgroundImage='url(images/image-product-4.jpg)';
+        lightGalleryImage.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${4}.jpg`;
     }
-    console.log(count);
-
 
 }
 
@@ -128,8 +132,6 @@ function myThumbnail(e){
     // console.log(desktopImage.childNodes[1].src);
   
 }
-
-
 
 previous.addEventListener('click',myPrevious);
 next.addEventListener('click',myNext);
