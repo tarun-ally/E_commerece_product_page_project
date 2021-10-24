@@ -23,6 +23,8 @@ const prizing = document.getElementById('name-value');
  
 
 const lightGaleryPrevious=document.getElementById("lg-previous");
+let count1 =1;
+
 
 
 const lightGaleryNext=document.getElementById("lg-next");
@@ -54,49 +56,50 @@ function myLightGaleryClose(){
 
 
 // for Light -gallery..................................................
-let count1 =1;
 
 lightGaleryThumbnail.addEventListener('click',mylightGaleryThumbnail)
 
 
+
+lightGaleryPrevious.addEventListener('click',mylightGaleryPrevious);
+
+lightGaleryNext.addEventListener('click',mylightGaleryNext);
+
+
 function mylightGaleryThumbnail(e){
     if(e.target.alt !=undefined){
+
         count1 = e.target.alt;
+        console.log(count1)
         lightGalleryImage.childNodes[1].src = `images/image-product-${count1}.jpg`;
     }
   
 }
-lightGaleryPrevious.addEventListener('click',mylightGaleryPrevious);
-
-// console.log(lightGalleryImage.childNodes);
-lightGaleryNext.addEventListener('click',mylightGaleryNext);
-//   lightGalleryShow.childNodes[1].src = `http://127.0.0.1:5500/images/image-product-${e.target.alt}.jpg`
 
 function mylightGaleryNext(e){
-    console.log(e.target.alt,'as',count1);
-console.log(lightGalleryImage.childNodes[1].src);
+    // console.log(count1,'RIGHT')
 
-    if (count1==4){
+    if (count1 >= 4){
         count1 = 1;
     }else{
-        count1+=1;
+        count1 += 1;
     }
-    if( count1==1){
+    if( count1 == 1){
         lightGalleryImage.childNodes[1].src = `images/image-product-${1}.jpg`;
 
         // lightGalery.style.backgroundImage='url(images/image-product-1.jpg)';
     }
-    else if(count1 ==2){
+    else if(count1 == 2){
         lightGalleryImage.childNodes[1].src = `images/image-product-${2}.jpg`;
 
         // lightGalery.style.backgroundImage='url(images/image-product-2.jpg)';
     }
-    else if(count1 ==3){
+    else if(count1 == 3){
         lightGalleryImage.childNodes[1].src = `images/image-product-${3}.jpg`;
 
         // lightGalery.style.backgroundImage='url(images/image-product-3.jpg)';
     }
-    else if(count1 ==4){
+    else if(count1 == 4){
         lightGalleryImage.childNodes[1].src = `images/image-product-${4}.jpg`;
 
     }
@@ -104,21 +107,24 @@ console.log(lightGalleryImage.childNodes[1].src);
 }
 
 function mylightGaleryPrevious(){
-    if (count1==1){
-        count1 =4;
+    // console.log(count1,'LEFT')
+    if (count1 == 1){
+        count1 = 4;
     }else{
-        count1-=1;
+        count1   =count1- 1;
     }
-    if( count1==1){
+
+
+    if( count1 == 1){
         lightGalleryImage.childNodes[1].src = `images/image-product-${1}.jpg`;
     }
-    else if(count1 ==2){
+    else if(count1 == 2){
         lightGalleryImage.childNodes[1].src = `images/image-product-${2}.jpg`;
     }
-    else if(count1 ==3){
+    else if(count1 == 3){
         lightGalleryImage.childNodes[1].src = `images/image-product-${3}.jpg`;
     }
-    else if(count1 ==4){
+    else if(count1 == 4){
         lightGalleryImage.childNodes[1].src = `images/image-product-${4}.jpg`;
     }
 
@@ -128,13 +134,13 @@ function mylightGaleryPrevious(){
 
 // for desktop..........
 
-console.log(thumbnail.childNodes[3].alt);
+// console.log(thumbnail.childNodes[3].alt);
 
 
 thumbnail.addEventListener('click',myThumbnail);
 function myThumbnail(e){
-    console.log(e.target);
-    console.log(e.target.alt);
+    // console.log(e.target);
+    // console.log(e.target.alt);
     if(e.target.alt !=undefined){
 
         lightGalleryShow.childNodes[1].src = `images/image-product-${e.target.alt}.jpg`
@@ -220,9 +226,6 @@ function wrapper() {
 
     } else {
         x.style.display = "block";
-        // burgerTag.src = "./images/icon-close.svg";
-        // const shadow = document.querySelector("#my-cart ");
-        // shadow.style.boxShadow = "0 30px 0px 0 hsl(0, 0%, 0%,0.3)"
 
     }
 
@@ -239,16 +242,12 @@ function removingProduct() {
     let line = document.createElement('li');
     showingNumber.removeChild(showingNumber.childNodes[1]);
     showingNumber.appendChild(line.appendChild(document.createTextNode(number)));
-    console.log('tarun')
 }
 
 // prizing .......................................
 
 const countingNumber = document.getElementById('counting-number');
-// countingNumber.addEventListener('click',myPrizing);
 
-// console.log(countingNumber.childNodes);
-// console.log(countingNumber.childNodes[1]);
 function myPrizing() {
 
     if(number > -1){
@@ -261,7 +260,7 @@ function myPrizing() {
         
         let calculation = `$125.00 x ${number}  $${multiply}`;
         prizing.childNodes[3].textContent = calculation;
-        console.log(calculation);
+        // console.log(calculation);
     }
 }
 // myPrizing();
@@ -274,29 +273,15 @@ function myCart() {
     if (x.style.display === "block") {
         x.style.display = "none";
         // burgerTag.src = "./images/icon-hamburger.svg";
-
-
-
-    } else {
-        // x.style.display = "block";
-        // burgerTag.src = "./images/icon-close.svg";
-        // const shadow = document.querySelector("#mylink");
-
     }
 
 }
-
-
 // ''''''''''''''''''''''''''''''''''''''''''
-
-
-
 minus.addEventListener('click', myMinus);
 plus.addEventListener('click', myPlus);
-console.log(minus);
+
 function myMinus() {
     // console.log(showingNumber.nodeValue);
-
     if (number > 0) {
         showingNumber.removeChild(showingNumber.childNodes[1]);
         number -= 1;
@@ -307,7 +292,6 @@ function myMinus() {
 
 function myPlus() {
     // console.log(showingNumber.nodeValue);
-
     if (number >= 0) {
         showingNumber.removeChild(showingNumber.childNodes[1]);
         number += 1;
@@ -317,9 +301,6 @@ function myPlus() {
 }
 //--------------------------------------------------- 
 
-
-
-
 //    menu function....................................
 function menu() {
     // let burgerTag = document.querySelector(".close");
@@ -327,15 +308,9 @@ function menu() {
     let x = document.getElementById("mylink");
     if (x.style.display === "block") {
         x.style.display = "none";
-
-
-
     } else {
         x.style.display = "block";
-    
         icon.style.width = "100px";
-     
-
     }
 
 }
